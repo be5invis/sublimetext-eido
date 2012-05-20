@@ -1,0 +1,8 @@
+{
+	"cmd": ["eidoc", "$file"],
+	"working_dir": "${project_path:${folder:${file_path}}}",
+	"selector": "text.eido",
+	"windows": {
+		"cmd": ["eidoc.cmd", "$file"]
+	}
+}
