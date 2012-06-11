@@ -111,6 +111,13 @@
 			<key>name</key>
 			<string>string.quoted.code.eido</string>
 		</dict>
+		<!-- Fixes ST2's CJK word wrapping issue -->
+		<dict>
+			<key>match</key>
+			<string>[$*,£¥·‘“〈《「『【〔〖〝﹗﹙﹛＄（．［｛￡￥]*[&#x3000;-&#x9fff;][!%),.:;>?¢¨°·ˇˉ―‖’”„‟†‡›℃∶、。〃〆〈《「『〕〗〞︵︹︽︿﹃﹘﹚﹜！＂％＇），．：；？］｀｜｝～ヽヾーァィゥェォッャュョヮヵヶぁぃぅぇぉっゃゅょゎゕゖㇰㇱㇲㇳㇴㇵㇶㇷㇸㇹㇺㇻㇼㇽㇾㇿ々〻]*</string>
+			<key>name</key>
+			<string>meta.cjkword</string>
+		</dict>
 		<dict>
 			<key>match</key>
 			<string>\*+|~+</string>
