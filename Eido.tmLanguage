@@ -6,6 +6,10 @@
 	<array>
 		<string>ed</string>
 	</array>
+	<key>foldingStartMarker</key>
+	<string>/\*\*|\{\s*$</string>
+	<key>foldingStopMarker</key>
+	<string>\*\*/|^\s*\}</string>
 	<key>name</key>
 	<string>Eido</string>
 	<key>patterns</key>
@@ -60,31 +64,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^(\t*)((\|\|)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*,\./&lt;&gt;?;:"\{\}\|\-=_+]))</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.function.eido</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>^(?!^\1)(?=[ \t]*\S)</string>
-			<key>name</key>
-			<string>meta.string.unquoted.block.raw.eido</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>name</key><string>string.unquoted.raw.blockAll.eido</string>
-					<key>match</key><string>^.+</string>
-				</dict>
-			</array>
-		</dict>
-
-		<dict>
-			<key>begin</key>
-			<string>^(\t*)((\|)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*,\./&lt;&gt;?;:"\{\}\|\-=_+]))</string>
+			<string>^(\t*)((\|)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w+|,))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
@@ -111,13 +91,6 @@
 			<key>name</key>
 			<string>string.quoted.code.eido</string>
 		</dict>
-		<!-- Fixes ST2's CJK word wrapping issue -->
-		<dict>
-			<key>match</key>
-			<string>[$£¥‘“〈《「『【〔＄（［｛｢￡￥]*[&#x3000;-&#x9fff;][!%,.:;?¢°’”‰′″℃、。々〉》」』】〕ぁぃぅぇぉっゃゅょゎ゛゜ゝゞァィゥェォッャュョヮヵヶゕゖㇰㇱㇲㇳㇴㇵㇶㇷㇸㇹㇺㇻㇼㇽㇾㇿ・ーヽヾ！％），．：；？］｝｡｣､･ｧｨｩｪｫｬｭｮｯｰﾞﾟ￠]*</string>
-			<key>name</key>
-			<string>meta.cjkword</string>
-		</dict>
 		<dict>
 			<key>match</key>
 			<string>\*+|~+</string>
@@ -134,7 +107,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(\\)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*,\./&lt;&gt;?;:"\{\}\|\-=_+])</string>
+			<string>(\\)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w+|,)</string>
 			<key>name</key>
 			<string>keyword.function.eido</string>
 		</dict>
@@ -148,9 +121,15 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\t*(::?)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*,\./&lt;&gt;?;:"\{\}\|\-=_+])</string>
+			<string>^\t*(::?)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w+|,)</string>
 			<key>name</key>
 			<string>keyword.function.eido</string>
+		</dict>
+		<dict>
+		    <key>match</key>
+		    <string>[$£¥‘“〈《「『【〔＄（［｛｢￡￥]*[&#x3000;-&#x9fff;][!%,.:;?¢°’”‰′″℃、。​々〉》」』】〕ぁぃぅぇぉっゃゅょゎ゛゜ゝゞァィゥェォッャュョヮヵヶゕゖㇰㇱㇲㇳㇴㇵㇶㇷㇸㇹㇺㇻㇼㇽㇾㇿ・ーヽヾ！％），．：；？］｝​｡｣､･ｧｨｩｪｫｬｭｮｯｰﾞﾟ￠]*</string>
+		    <key>name</key>
+		    <string>meta.cjkword</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
