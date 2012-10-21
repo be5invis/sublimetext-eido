@@ -64,7 +64,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^(\t*)((\|)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w+|,))</string>
+			<string>^(\t*)((\|)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w*|,))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
@@ -107,7 +107,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>(\\)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w+|,)</string>
+			<string>(\\)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w*|,)</string>
 			<key>name</key>
 			<string>keyword.function.eido</string>
 		</dict>
@@ -121,7 +121,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^\t*(::?)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w+|,)</string>
+			<string>^\t*(::?)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w*|,)</string>
 			<key>name</key>
 			<string>keyword.function.eido</string>
 		</dict>
