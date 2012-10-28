@@ -6,10 +6,6 @@
 	<array>
 		<string>ed</string>
 	</array>
-	<key>foldingStartMarker</key>
-	<string>/\*\*|\{\s*$</string>
-	<key>foldingStopMarker</key>
-	<string>\*\*/|^\s*\}</string>
 	<key>name</key>
 	<string>Eido</string>
 	<key>patterns</key>
@@ -64,6 +60,33 @@
 		</dict>
 		<dict>
 			<key>begin</key>
+			<string>^(\t*)((\|\|)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w*|,))(.*)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.function.eido</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>^(?!^\1)(?=[ \t]*\S)</string>
+			<key>name</key>
+			<string>meta.string.unquoted.block.raw.eido</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>name</key><string>string.unquoted.raw.block.eido</string>
+					<key>match</key><string>^.*</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>text.eido</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
 			<string>^(\t*)((\|)(?:\w+|[\\'\[\]\(\)~!@#$%^&amp;*\./&lt;&gt;?;:"\{\}\|\-=_+]\w*|,))</string>
 			<key>beginCaptures</key>
 			<dict>
@@ -81,7 +104,11 @@
 			<array>
 				<dict>
 					<key>name</key><string>string.unquoted.raw.block.eido</string>
-					<key>match</key><string>^.+</string>
+					<key>match</key><string>^.*</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>text.eido</string>
 				</dict>
 			</array>
 		</dict>
